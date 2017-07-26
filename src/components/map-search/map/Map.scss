@@ -1,0 +1,19 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.map, .map-container {
+    height: 60vh;
+    position: relative;
+}
+.map-container > * {
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: $breakpoint-md) {
+    .map {
+        flex: 2;
+    }
+    .map, .map-container {
+        height: 100%;
+    }
+}

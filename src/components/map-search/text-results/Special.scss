@@ -1,0 +1,15 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.special {
+    background: $color-white;
+    border-bottom: solid 1px $color-medium;
+    padding: $space-md;
+}
+.special:last-child {
+    border-bottom: none;
+}
+.special-day-header {
+    display: inline;
+    margin-right: $space-xs;
+    padding: $space-xs;
+}

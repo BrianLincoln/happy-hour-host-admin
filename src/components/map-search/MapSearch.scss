@@ -1,0 +1,14 @@
+@import "./../../sprak-styles/sprak-variables.scss";
+.map-search-container {
+    background: $color-light;
+    box-shadow: 0px 1px 1px $color-medium;
+}
+
+@media (min-width: $breakpoint-md) {
+    .map-search-container {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 60vh;
+        overflow: hidden;
+    }
+}
