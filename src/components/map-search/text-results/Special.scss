@@ -1,15 +1,20 @@
 @import "./../../../sprak-styles/sprak-variables.scss";
 
 .special {
-    background: $color-white;
-    border-bottom: solid 1px $color-medium;
-    padding: $space-md;
+    border-top: solid 1px $color-medium;
+    padding: $space-md 0;
 }
 .special:last-child {
     border-bottom: none;
+    padding-bottom: 0px;
+}
+.special-headline {
+    font-weight: bold;
 }
 .special-day-header {
-    display: inline;
+    display: inline-block;
     margin-right: $space-xs;
+    min-width: 0px;
     padding: $space-xs;
+    user-select: none;
 }

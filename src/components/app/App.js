@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import './../../sprak-styles/sprak.css';
 import './App.scss';
-import MapSearchContainer from './../map-search/MapSearchContainer';
-import MapLinkWrapper from './../map-links/MapLinkWrapper';
+import Homepage from './../homepage';
+import City from './../city';
+import Admin from './../admin';
 import config from './../../config';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="site-header">
-          <label className="font-title-sm">
+          <a href="/" className="font-title-sm">
             <i className="logo">
               <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -28,10 +35,33 @@ class App extends Component {
             </i>       
             <br />     
             happy hour host
-          </label>
-        </header>       
-        <MapSearchContainer google={config.googleMapsApiKey} />
-        <MapLinkWrapper />
+          </a>
+        </header>         
+
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path="/" render={ ()  => <Homepage 
+                  config={config}
+                /> 
+              }/>
+              <Route exact path="/c/:city/:area?" render={ (meta)  => <City 
+                  config={config}
+                  city={meta.match.params.city}
+                  area={meta.match.params.area}
+                /> 
+              }/>
+              <Route exact path="/admin" render={ ()  => <Admin 
+                  config={config}                 
+                /> 
+              }/>              
+            </Switch>
+          </div>
+        </Router>
+
+
+
+
       </div>
     );
   }

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Special from './Special';
+import './Result.scss';
 
 class Result extends Component {
   render() { 
     if (this.props.specials) {
       let specials = this.props.specials.map((special) => {
-        return <Special key={special.id} {...special} />
+        return <Special key={special._id} {...special} />
       });
       return (        
-          <li className="card text-result">
-            <h2 className="card-heading">{this.props.name}</h2>
+          <li className="text-result">
+            <h3 className="text-result-name">{this.props.name}</h3>
             <ul className="special-list">{specials}</ul>
           </li>
       );

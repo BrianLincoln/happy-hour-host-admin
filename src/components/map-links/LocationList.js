@@ -7,7 +7,7 @@ class LocationList extends Component {
         <div className="card col-xs-12">
           <h1 className="card-heading">Best Happy Hours Near You</h1>
           <ul className="list-group">
-            <li className="list-item">Uptown Minneapolis Happy Hours</li>
+            <li className="list-item"><a href="/c/minneapolis/uptown">Uptown Minneapolis Happy Hours</a></li>
             <li className="list-item">Eat Street Minneapolis Happy Hours</li>
             <li className="list-item">Downtown Minneapolis Happy Hours</li>
             <li className="list-item">South Minneapolis Happy Hours</li>

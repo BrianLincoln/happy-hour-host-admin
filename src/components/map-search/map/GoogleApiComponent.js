@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
 import cache from '../../../utils/ScriptCache'
 import GoogleApi from '../../../utils/GoogleApi'
 
@@ -58,6 +57,7 @@ export const wrapper = (options) => (WrappedComponent) => {
         google: this.state.google,
         mapComponent: this.refs.map
       })
+      
       return (
         <div className="map">
           <WrappedComponent {...props} />

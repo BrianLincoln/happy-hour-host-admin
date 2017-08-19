@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DailyList from './DailyList';
+import DayList from './DayList';
 import LocationList from './LocationList';
 import './MapLinks.scss';
 
@@ -8,7 +8,7 @@ class MapLinkWrapper extends Component {
     return (
       <section className="container space-top-lg space-bottom-lg">
         <div className="row">      
-          <DailyList />
+          <DayList />
           <LocationList />
         </div>
       </section>

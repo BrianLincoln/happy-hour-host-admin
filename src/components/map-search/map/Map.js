@@ -10,18 +10,25 @@ class Map extends Component {
     this.renderChildren = this.renderChildren.bind(this);
   }  
   componentDidMount() {
-    if (this.props.centerAroundCurrentLocation) {
-        if (navigator && navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((pos) => {
-                const coords = pos.coords;
-                this.setState({
-                    currentLocation: {
-                        lat: coords.latitude,
-                        lng: coords.longitude
-                    }
-                })
-            })
+    if (this.props.centerAroundCurrentLocation 
+        && navigator 
+        && navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((pos) => {
+            const coords = pos.coords;
+            this.setState({
+              currentLocation: {
+                lat: coords.latitude,
+                lng: coords.longitude
+                  }
+            });
+          });
+    } else {
+      this.setState({
+        currentLocation: {
+          lat: this.props.initialMapCenter.lat,
+          lng: this.props.initialMapCenter.long
         }
+      });
     }
     this.loadMap();
   }
@@ -45,12 +52,18 @@ class Map extends Component {
       const mapRef = this.refs.map;
       const node = ReactDOM.findDOMNode(mapRef);
 
-      let {initialCenter, zoom} = this.props;
-      const {lat, lng} = initialCenter;
+      let {initialMapCenter, zoom} = this.props;
+      const {lat, lng} = initialMapCenter;
       const center = new maps.LatLng(lat, lng);
       const mapConfig = Object.assign({}, {
         center: center,
-        zoom: zoom
+        zoom: zoom,
+        styles: [
+          {
+            featureType: 'poi',
+            stylers: [{visibility: 'off'}]
+          }
+        ]
       })
       
       this.map = new maps.Map(node, mapConfig);
@@ -58,6 +71,7 @@ class Map extends Component {
       this.map.addListener('bounds_changed', _.debounce(() => {        
         this.props.onBoundsChange(this.map);
       }, 500));
+      this.map.addListener('click', this.props.handleMapClick);
     }
   }
   recenterMap() {
@@ -82,7 +96,7 @@ class Map extends Component {
         map: this.map,
         google: this.props.google
       });
-    })
+    });
   }
   render() {
     return (
@@ -104,8 +118,8 @@ Map.propTypes = {
 Map.defaultProps = {
   zoom: 13,
   initialCenter: {
-    lat: 40.9778,
-    lng: -93.2650
+    lat: 0,
+    lng: 0
   },
   centerAroundCurrentLocation: false
 }
