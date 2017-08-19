@@ -1,0 +1,27 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.location-list-wrapper {        
+    background: $color-light;
+    overflow: hidden;
+}
+
+.text-location {
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: $breakpoint-md) {
+    .location-list-wrapper {  
+        box-shadow: 1px 0px 3px $color-medium;
+        display: flex;
+        height: 100%;
+        flex: 1;
+        flex-direction: column;
+        z-index: 3;
+
+    }
+    .location-list {   
+        overflow-y: auto;
+    }
+}

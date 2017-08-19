@@ -1,0 +1,23 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.admin-add-location-action {
+    display: block;
+}
+.add-location-wrapper {
+    padding: $space-md;
+    width: 100%;
+}
+.form-element  {
+    display: block;
+    margin-bottom: $space-lg;
+}
+
+.form-label {
+    display: block;
+    line-height: .8em;
+}
+
+.form-element > input {
+    margin: 0;
+    width: 100%;
+}

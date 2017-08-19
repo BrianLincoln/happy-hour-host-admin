@@ -1,0 +1,14 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.filters-wrapper {
+    padding: $space-sm;
+}
+.day-filter-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: $space-sm;
+}
+.time-filter-wrapper select {
+    padding: $space-sm;
+    width: 100%;
+}

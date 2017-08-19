@@ -1,0 +1,16 @@
+@import "./../../../sprak-styles/sprak-variables.scss";
+
+.text-result {
+    background: $color-white;
+    border-bottom: solid 1px $color-medium;
+    padding: $space-sm;
+    margin-bottom: $space-sm;
+}
+
+.text-result:last-child {
+    border-bottom: none;
+}
+
+.text-result-name {
+    margin-bottom: $space-sm;
+}
