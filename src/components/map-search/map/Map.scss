@@ -12,9 +12,13 @@
 @media (min-width: $breakpoint-md) {
     .map {
         flex: 2;
-        width: 66.666666666%;
     }
     .map, .map-container {
         height: 100%;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .map {
     }
 }

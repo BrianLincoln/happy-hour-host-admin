@@ -13,13 +13,12 @@
 
 @media (min-width: $breakpoint-md) {
     .location-list-wrapper {  
-        box-shadow: 1px 0px 3px $color-medium;
         display: flex;
         height: 100%;
         flex: 1;
         flex-direction: column;
-        z-index: 3;
-
+        padding-top: $space-sm;
+        z-index: 3;        
     }
     .location-list {   
         overflow-y: auto;

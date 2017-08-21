@@ -6,8 +6,11 @@ import timeConverter from './../../../utils/TimeConverter';
 class Special extends Component {
   render() { 
 
-    let dayHeaders = this.props.days.map((day) => {
-      return <label className="button_sm button_accent special-day-header" key={day}>{dayLabels[day]}</label>;
+    let days = this.props.days.map((day, index) => {      
+      const isLast = index + 1 === this.props.days.length;
+      const labelText = isLast ? dayLabels[day] : dayLabels[day] + ", ";
+
+      return <label className="font-base-alt" key={day}>{labelText}</label>;
     });
 
     let times = this.props.times.map((time) => {
@@ -19,13 +22,13 @@ class Special extends Component {
 
     return (        
         <li className="special">
-          <div className="special-headline space-bottom-md">{this.props.headline}</div>
-          <div className="special-description space-bottom-md">{this.props.description}</div>
+          <div className="special-headline">{this.props.headline}</div>
+          <div className="special-description">{this.props.description}</div>
           <div>
-            {dayHeaders}
+            <i className="fa fa-calendar special-icon" aria-hidden="true"></i> {days}
           </div>
           <div>
-            {times}
+            <i className="fa fa-clock-o special-icon" aria-hidden="true"></i> {times}
           </div>
         </li>
     );

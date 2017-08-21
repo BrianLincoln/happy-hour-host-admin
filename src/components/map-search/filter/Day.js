@@ -10,7 +10,7 @@ class Filter extends Component {
     this.props.handleDayClick(this.props.dayNumber);
   }
   render() { 
-    let classes = this.props.isActive ? "button_accent" : "button_light";
+    let classes = this.props.isActive ? "button_valencia" : "button_light";
     classes += " button_sm special-day-header";
 
     return (

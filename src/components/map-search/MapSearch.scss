@@ -24,12 +24,18 @@
     .map-search-container {
         display: flex;
         flex-direction: row-reverse;
-        height: 70vh;
+        height: 90vh;
         overflow: hidden;
     }
     .map-results-wrapper {
+        box-shadow: 1px 0px 3px $color-medium;
         display: flex;
         flex-direction: column;
-        width: 33.333333333333%;
+        width: 33.333333%;
+    }
+}
+@media (min-width: $breakpoint-lg) {
+    .map-results-wrapper {
+        width: 25%;
     }
 }

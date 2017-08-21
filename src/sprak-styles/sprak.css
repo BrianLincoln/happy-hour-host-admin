@@ -12,7 +12,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -28,7 +28,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -63,7 +63,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -79,7 +79,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -103,8 +103,11 @@
 .bg-dark {
   background-color: #484847; }
 
-.bg-accent {
-  background-color: #24c9f2; }
+.bg-scooter {
+  background-color: #22B8DD; }
+
+.bg-valencia {
+  background-color: #d73838; }
 
 .color-white {
   color: #FFFFFF; }
@@ -118,8 +121,11 @@
 .color-dark {
   color: #484847; }
 
-.color-accent {
-  color: #24c9f2; }
+.color-scooter {
+  color: #22B8DD; }
+
+.color-valencia {
+  color: #d73838; }
 
 .font-title-lg, h1 {
   font-family: Georgia, serif;
@@ -135,7 +141,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -151,7 +157,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -177,7 +183,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -193,7 +199,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -249,7 +255,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -265,7 +271,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -327,7 +333,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -343,7 +349,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -376,7 +382,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -392,7 +398,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1041,7 +1047,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1057,7 +1063,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1069,7 +1075,7 @@
     font-size: 53px;
     line-height: 64px; } }
 
-.button, .button_md, .button_sm, .button_accent, a.button_accent:visited {
+.button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited {
   border-radius: 6px;
   border-width: 0px;
   cursor: pointer;
@@ -1077,7 +1083,7 @@
   padding: 15px 30px;
   min-width: 60px;
   text-align: center; }
-  .button:hover, .button_md:hover, .button_sm:hover, .button_accent:hover, a.button_accent:hover:visited {
+  .button:hover, .button_md:hover, .button_sm:hover, .button_scooter:hover, a.button_scooter:hover:visited, .button_valencia:hover, a.button_valencia:hover:visited {
     opacity: .8; }
 
 .button_sm {
@@ -1099,13 +1105,17 @@
   background-color: #484847;
   color: #FFFFFF; }
 
-.button_accent, a.button_accent:visited {
-  background-color: #24c9f2;
+.button_scooter, a.button_scooter:visited {
+  background-color: #22B8DD;
+  color: #FFFFFF; }
+
+.button_valencia, a.button_valencia:visited {
+  background-color: #d73838;
   color: #FFFFFF; }
 
 .button_transparent, a.button_transparent:visited {
   background-color: transparent;
-  color: #24c9f2; }
+  color: #22B8DD; }
   .button_transparent:hover, a.button_transparent:visited:hover {
     text-decoration: underline; }
 
@@ -1123,7 +1133,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1139,7 +1149,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1212,7 +1222,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1228,7 +1238,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1265,7 +1275,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1281,7 +1291,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1318,7 +1328,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1334,7 +1344,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;
@@ -1372,7 +1382,7 @@
 
 .font-title-sm, h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 18px; }
 
@@ -1388,7 +1398,7 @@
   font-weight: normal;
   line-height: 22px; }
 
-.font-sm, .button, .button_md, .button_sm, .button_accent, a.button_accent:visited, .list-item-label, .list-item-value {
+.font-sm, .button, .button_md, .button_sm, .button_scooter, a.button_scooter:visited, .button_valencia, a.button_valencia:visited, .list-item-label, .list-item-value {
   font-family: arial, sans-serif;
   font-size: 11px;
   font-weight: bold;

@@ -1,15 +1,25 @@
 @import "./../../sprak-styles/sprak-variables.scss";
 
 .site-header {
-    box-shadow: 0px 1px 1px $color-medium;
-    padding: $space-md;
-    position: relative;
-    text-align: center;
-    z-index: 4;
+  background-color: $color-valencia;
+  box-shadow: 0px 1px 1px $color-medium;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  z-index: 4;
+}
 
-    > a {      
-      color: $color-accent;
-    }
+a.logo {      
+  color: $color-white;
+  font-family: 'Neucha', sans-serif;
+  text-shadow: 1px 1px 1px #302c29;
+}
+
+.logo-image {
+  height: 40px;
 }
 
 @keyframes spinner {
@@ -27,7 +37,7 @@
   margin-top: -25px;
   margin-left: -25px;
   border-radius: 50%;
-  border: 5px solid $color-accent;
+  border: 5px solid $color-scooter;
   border-top-color: $color-light;
   animation: spinner .6s linear infinite;
 }

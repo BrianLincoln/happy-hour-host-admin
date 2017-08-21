@@ -52,7 +52,7 @@ export class AddTime extends Component {
             <label className="form-label" htmlFor="end-time">end time</label>
             <input onChange={this.handleTimeChange} required id="end-time" type="time" />                  
           </div>            
-          <button onClick={this.handleSubmit} className="button_sm button_accent">save</button>
+          <button onClick={this.handleSubmit} className="button_sm button_scooter">save</button>
         </div>
       );
     } else {

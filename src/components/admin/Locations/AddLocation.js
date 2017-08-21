@@ -90,7 +90,7 @@ export class AddLocation extends Component {
               <input required type="text" id="address-zip" value={this.state.addressZip} onChange={this.handleFieldChange} />
             </div>                                                                       
 
-            <input className="button_sm button_accent" type="submit" value="Submit" />
+            <input className="button_sm button_scooter" type="submit" value="Submit" />
           </form>
         </div>
       );

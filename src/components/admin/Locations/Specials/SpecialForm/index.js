@@ -70,7 +70,7 @@ export class AddSpecial extends Component {
           </div>             
           <Days handleDayChange={this.handleDayChange} days={this.state.days}/>   
           <Times handleSubmitNewTime={this.handleSubmitNewTime} deleteTime={this.deleteTime} times={this.state.times} />      
-          <input className="button_sm button_accent" type="submit" value="Submit" />
+          <input className="button_sm button_scooter" type="submit" value="Submit" />
         </form>        
       </div>
     );
