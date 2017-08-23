@@ -41,3 +41,25 @@ a.logo {
   border-top-color: $color-light;
   animation: spinner .6s linear infinite;
 }
+
+
+//this probably aught to end up in the sprak style guide
+.form-element  {
+  display: block;
+  margin-bottom: $space-lg;
+}
+
+.form-label {
+  display: block;
+  line-height: .8em;
+}
+
+.form-element > input {
+  margin: 0;
+  width: 100%;
+}
+.form-element > textarea {
+  min-height: 100px;
+  margin: 0;
+  width: 100%;
+}
