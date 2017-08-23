@@ -4,9 +4,7 @@ import Time from './Time';
 
 export class Times extends Component {
   render() {
-    console.log("pppp: ", this.props);
     let times = this.props.times.map((time, index) => {
-      console.log("tttttt: ", time);
       return (
         <Time key={index} index={index} time={time} deleteTime={this.props.deleteTime} />
       );

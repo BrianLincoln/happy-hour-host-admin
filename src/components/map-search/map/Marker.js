@@ -17,9 +17,6 @@ class Marker extends Component {
     }
   }  
   handleClick(event) {
-    console.log("marker props: ", this.props);
-    console.log(event);
-    console.log("handle click");
     this.props.handleMarkerClick(this.props.location, this.marker);
   }  
   renderMarker() {

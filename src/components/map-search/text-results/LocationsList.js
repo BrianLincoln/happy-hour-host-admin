@@ -13,7 +13,6 @@ class LocationsList extends Component {
     );  
 
     if (this.props.selectedLocation) {
-      console.log("selected location exists", this.props.selectedLocation);
       locations = <Result key={this.props.selectedLocation._id} {...this.props.selectedLocation} /> 
     } else if (this.props.locations.length > 0) {
       locations = this.props.locations.map((location) => {

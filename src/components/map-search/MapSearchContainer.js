@@ -84,7 +84,6 @@ export class MapSearchContainer extends Component {
   }
 
   render() {
-    console.log("selected location: " , this.state.selectedLocation);
     return (
         <div className="map-search-container">
           <MapContainer 

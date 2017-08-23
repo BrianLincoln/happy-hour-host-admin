@@ -1,15 +1,16 @@
 import _ from 'lodash';
+import config from './../config';
 
 const cityApi = {
    getCities: function() {
-    return fetch('http://localhost:9000/cities').then((response) => response.json())
+    return fetch(config.apiPath + '/cities').then((response) => response.json())
     .then((cities) => {
         // do stuff with responseJSON here...
        return cities;
     });
    },
    postCity: function(name) {
-    return fetch('http://localhost:9000/city', {      
+    return fetch(config.apiPath + '/city', {      
         method: 'post',
         body: JSON.stringify({
             name: name
@@ -23,7 +24,7 @@ const cityApi = {
     .catch(function(res){ console.log(res) })
    },
    deleteCity: function(_id) {
-    return fetch('http://localhost:9000/city', {      
+    return fetch(config.apiPath + '/city', {      
         method: 'delete',
         body: JSON.stringify({
             _id: _id
@@ -38,7 +39,7 @@ const cityApi = {
    },
 
    getNeighborhoods: function(cityId) {
-    return fetch('http://localhost:9000/city/' + cityId + '/neighborhood',).then((response) => response.json())
+    return fetch(config.apiPath + '/city/' + cityId + '/neighborhood',).then((response) => response.json())
     .then((neighborhoods) => {
         console.log("fetched result: ", neighborhoods);
         // do stuff with responseJSON here...
@@ -46,7 +47,7 @@ const cityApi = {
     });
    },
    postNeighborhood: function(cityId, neighborhoodName) {
-    return fetch('http://localhost:9000/city/' + cityId + '/neighborhood', {      
+    return fetch(config.apiPath + '/city/' + cityId + '/neighborhood', {      
         method: 'post',
         body: JSON.stringify({
             name: neighborhoodName

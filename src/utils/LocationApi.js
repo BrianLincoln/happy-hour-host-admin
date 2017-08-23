@@ -1,11 +1,12 @@
 import _ from 'lodash';
+import config from './../config';
 
 //TEMP -- this should get dynamic once there are multiple cities
 const minneapolisCityId = "598392e1f69ccd390c5983c8";
 
 const locationApi = {
    getLocations: function(bounds, filters) {
-    return fetch('http://localhost:9000/city/' + minneapolisCityId + '/locations').then(function(response) {
+    return fetch(config.apiPath + '/city/' + minneapolisCityId + '/locations').then(function(response) {
         return response.json();
     }).then(function(response) {
         let results = [];
@@ -78,7 +79,7 @@ const locationApi = {
    },
 
    getLocationsByCity: function(cityId) {
-        return fetch('http://localhost:9000/city/' + cityId + '/locations').then((response) => response.json())
+        return fetch(config.apiPath + '/city/' + cityId + '/locations').then((response) => response.json())
         .then((cities) => {
             // do stuff with responseJSON here...
         return cities;
@@ -86,7 +87,7 @@ const locationApi = {
    },   
 
     postLocation: function(location, cityId) {
-        return fetch('http://localhost:9000/location', {      
+        return fetch(config.apiPath + '/location', {      
             method: 'post',
             body: JSON.stringify({
                 name: location.name,
@@ -112,7 +113,7 @@ const locationApi = {
     },
 
     postSpecial: function(special, locationId) {
-    return fetch('http://localhost:9000/location/' + locationId + '/special', {      
+    return fetch(config.apiPath + '/location/' + locationId + '/special', {      
         method: 'post',
         body: JSON.stringify({
             special: special,
@@ -128,7 +129,7 @@ const locationApi = {
    }, 
 
     updateSpecial: function(special, locationId, specialId) {
-        return fetch('http://localhost:9000/location/' + locationId + '/special/' + specialId, {      
+        return fetch(config.apiPath + '/location/' + locationId + '/special/' + specialId, {      
             method: 'post',
             body: JSON.stringify({
                 special: special,
@@ -145,7 +146,7 @@ const locationApi = {
     },    
 
     deleteSpecial: function(locationId, specialId) {
-    return fetch('http://localhost:9000/location/' + locationId + '/special/' + specialId, {      
+    return fetch(config.apiPath + '/location/' + locationId + '/special/' + specialId, {      
         method: 'delete'     
     })
     .then(function(res){ console.log(res) })

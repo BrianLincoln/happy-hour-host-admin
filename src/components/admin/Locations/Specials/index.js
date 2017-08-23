@@ -28,7 +28,6 @@ export class Specials extends Component {
     });
   }
   toggleAddSpecialForm() {
-    console.log("toggle: ", this.state.showAddSpecialForm, " >> ", !this.state.showAddSpecialForm );
     this.setState({showAddSpecialForm: !this.state.showAddSpecialForm});
   }  
   render() {
