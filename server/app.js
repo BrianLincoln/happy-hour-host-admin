@@ -9,7 +9,7 @@ var City = require('./models/city.js');
 var Location = require('./models/location.js');
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1/happy', { useMongoClient: true });
+mongoose.connect('mongodb://localhost:27017/happy', { useMongoClient: true });
 
 //Get the default connection
 const db = mongoose.connection;
