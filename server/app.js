@@ -1,12 +1,17 @@
 const express = require('express');
+const session = require('express-session');
 const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const path = require('path');
 const mongoose = require('mongoose');
+const path = require('path');
+const passport = require('passport');
+const passportConfig = require('./passport/passport-config');
 const _ = require('lodash');
+const secretConfig = require('./secret-config.js');
 var City = require('./models/city.js');
 var Location = require('./models/location.js');
+var User = require('./models/user.js');
 const app = express();
 
 mongoose.connect("mongodb://localhost:27017/happy", { useMongoClient: true });
@@ -31,7 +36,14 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Serve static assets
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+app.use(express.static(path.resolve(__dirname, '..', 'build'), {index: '_'}));
+
+app.use(session({ 
+  secret: 'temptemptemp'
+ })); // session secret
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/cities', (req, res) => {
   City.find({}, function(err, cities) {
@@ -156,9 +168,59 @@ app.delete('/location/:locationId/special/:specialId', (req, res) => {
   });
 });
 
+
+app.post('/login', 
+  passport.authenticate('local-login', 
+    {
+      failureRedirect: '/login'
+    }),
+    function(req, res) {
+      res.redirect('/');
+    }
+);
+
+app.get('/login', (req, res) => {
+  console.log("/login");
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'login.html'));
+});
+
+app.post('/signup', (req, res) => {
+  console.log(req.body);
+  let user = new User();
+  user.username = req.body.username;
+  user.password = user.generateHash(req.body.password);
+
+  if (req.body.username && req.body.password && req.body.secretCode === secretConfig.signUpSecretCode) {
+    user.save(function(err) {
+      if (err)
+        res.send(err);
+  
+      res.redirect('/login');
+    });
+  } else {
+    res.status(401);
+    res.json({ message: 'You don\'t know the secret code' });
+  }
+});
+
+
+app.get('/signup', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'signup.html'));
+});
+
 // Always return the main index.html, so react-router render the route in the client
-app.get('*', (req, res) => {
+app.get('*', isLoggedIn, (req, res) => {
+  console.log("***");
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
+function isLoggedIn(req, res, next) {
+  console.log("```````````````isLoggedIn: ", req.isAuthenticated());  
+    
+    if (process.env.NODE_ENV === "development" || req.isAuthenticated()) {      
+      return next();
+    }
+
+    res.redirect("/login");
+}
 module.exports = app;
